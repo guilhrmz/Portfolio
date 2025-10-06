@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    /* Removido padding-top do body para evitar afetar toda a página */
+}
+
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Gradiente azul escuro e azul – mais sóbrio que roxo */
+    color: white;
+    padding: 170px 0 100px 0; /* Aumentado padding-top para 170px: compensa navbar (70px) + padding original (100px) */
+    text-align: center;
+    /* Removido margin-top negativo, que podia causar confusão */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.about {
+    padding: 80px 0;
+    background-color: white;
+}
+
+/* Estilos para a foto de perfil – mais sutil */
+.profile-photo {
+    border-radius: 50%; /* Círculo perfeito */
+    width: 200px; /* Tamanho fixo no desktop */
+    height: 200px;
+    object-fit: cover; /* Preenche sem distorcer: corta bordas se necessário */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave, mas menos intensa */
+    display: block; /* Garante centralização */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-photo:hover {
+    transform: scale(1.02); /* Zoom bem leve no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra sutil no hover */
+}
+
+.contact {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #2c3e50; /* Azul escuro para combinar com o hero */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #ffffff; /* Fundo branco sólido – sem blur para visual mais clean */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve */
+    z-index: 1030; /* Garante que fique acima de tudo */
+}
+
+.nav-link {
+    color: #2c3e50 !important; /* Cor escura para contraste */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db !important; /* Azul no hover, em vez de roxo */
+}
+
+.btn-primary {
+    background-color: #3498db; /* Azul sólido – simples e profissional */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px; /* Bordas mais arredondadas, mas menos extremas */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição mais suave */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; /* Azul mais escuro no hover */
+    transform: translateY(-1px); /* Elevação sutil */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve */
+}
+
+/* Media query para mobile: ajusta padding do hero e tamanho da foto */
+@media (max-width: 991.98px) {
+    .hero {
+        padding: 140px 0 80px 0; /* Reduz para mobile: 140px top (navbar ~60px + padding original) */
+    }
+    .hero h1 {
+        font-size: 2.5rem; /* Título menor no mobile para melhor fit */
+    }
+    
+    .profile-photo {
+        width: 150px; /* Tamanho menor no mobile */
+        height: 150px;
+    }
+    
+    .btn-primary {
+        border-radius: 20px; /* Bordas ligeiramente menos arredondadas no mobile */
+    }
+}
